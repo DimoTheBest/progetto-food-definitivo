@@ -140,12 +140,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="foodDelivery.cpp" />
+    <ClCompile Include="macchina.cpp" />
+    <ClCompile Include="mezziDiConsegna.cpp" />
+    <ClCompile Include="motorino.cpp" />
     <ClCompile Include="Origine.cpp" />
     <ClCompile Include="ristorante.cpp" />
     <ClCompile Include="rosticceria.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="foodDelivery.h" />
+    <ClInclude Include="macchina.h" />
+    <ClInclude Include="mezziDiConsegna.h" />
+    <ClInclude Include="motorino.h" />
     <ClInclude Include="ristorante.h" />
     <ClInclude Include="rosticceria.h" />
   </ItemGroup>

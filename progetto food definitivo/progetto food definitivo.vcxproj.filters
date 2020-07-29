@@ -27,6 +27,15 @@
     <ClCompile Include="rosticceria.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
+    <ClCompile Include="mezziDiConsegna.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="macchina.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="motorino.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="foodDelivery.h">
@@ -36,6 +45,15 @@
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="rosticceria.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="mezziDiConsegna.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="macchina.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="motorino.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
   </ItemGroup>

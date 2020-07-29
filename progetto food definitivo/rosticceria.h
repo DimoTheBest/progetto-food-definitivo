@@ -15,6 +15,10 @@ public:
 	Rosticceria(string n, double posLocX, double posLocY, double pM, string cT, double pC);
 	virtual ~Rosticceria() {};
 
+	double GetPrezzoConsegna() { return prezzoConsegna; };
+
+	void visualizza();
+
 private:
 	double prezzoConsegna;
 };
