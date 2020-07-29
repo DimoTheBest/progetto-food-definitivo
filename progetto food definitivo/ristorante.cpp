@@ -2,10 +2,12 @@
 Ristorante::Ristorante() :foodDelivery()
 {
 	tempoMedioPreparazione = 0;
+	tempo = 0;
 }
 Ristorante::Ristorante(string n, double posLocX, double posLocY, double pM, string cT, int tempoM) : foodDelivery(n, posLocX, posLocY, pM, cT)
 {
 	tempoMedioPreparazione = tempoM;
+	tempo = 0;
 }
 
 void Ristorante::SetParcoMacchine()
@@ -30,6 +32,33 @@ void Ristorante::visualizzaMacchina(int i)
 	cout << "macchina-disponibilita': " << macchine.at(i).GetDisponibile() << endl;
 
 }
+
+void Ristorante::OrdinaPos(double x, double y)
+{
+	double distanza;
+	distanza = pow((GetPosizioneLocaleX() - x), 2) + pow((GetPosizioneLocaleY() - y), 2);
+	tempo = distanza / 60 * 60; // minuti per la consegna del cibo
+}
+
+void Ristorante::OrdinaPosQuant(double x, double y, int quantita)
+{
+	OrdinaPos(x, y);
+	tempo = tempo + (tempoMedioPreparazione * quantita);
+}
+
+void Ristorante::OrdinaPosQuantCibo(double x, double y, int quantita, string cibo)
+{
+	
+	if (GetCiboTipico()==cibo)
+	{
+		OrdinaPosQuant(x, y, quantita);
+	}
+	else
+	{
+		tempo = 0;
+	}
+}
+
 void Ristorante::visualizza()
 {
 	cout << "ristorante-nome: " << GetNome() << endl;

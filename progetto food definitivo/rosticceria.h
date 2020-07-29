@@ -25,11 +25,18 @@ public:
 
 	void visualizzaMotorino(int i);
 
+	void OrdinaPos(double x, double y);
+	void OrdinaPosQuant(double x, double y, int quantita);
+	void OrdinaPosQuantCibo(double x, double y, int quantita, string cibo);
+
+	double GetTempo() { return tempo; };
+
 	void visualizza();
 
 private:
 	double prezzoConsegna;
 	vector<Motorino> motorini;
+	double tempo;
 };
 
 #endif // !ROSTICCERIA_H

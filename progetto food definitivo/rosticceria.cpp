@@ -2,11 +2,13 @@
 Rosticceria::Rosticceria() :foodDelivery()
 {
 	prezzoConsegna = 0;
+	tempo = 0;
 }
 
 Rosticceria::Rosticceria(string n, double posLocX, double posLocY, double pM, string cT, double pC) : foodDelivery(n, posLocX, posLocY, pM, cT)
 {
 	prezzoConsegna = pC;
+	tempo = 0;
 }
 
 void Rosticceria::SetParcoMotorini()
@@ -29,6 +31,20 @@ void Rosticceria::visualizzaMotorino(int i)
 	cout << "motorino-velocita': " << motorini.at(i).GetVelocitaMedia() << endl;
 	cout << "motorino-disponibilita': " << motorini.at(i).GetDisponibile() << endl;
 	cout << "motorino-capienza: " << motorini.at(i).GetPorzioniTrasportabili() << endl;
+}
+
+void Rosticceria::OrdinaPos(double x, double y)
+{
+	double distanza;
+	distanza = pow((GetPosizioneLocaleX() - x), 2) + pow((GetPosizioneLocaleY() - y), 2);
+	tempo = distanza / 30 * 60; // minuti per la consegna del cibo
+}
+void Rosticceria::OrdinaPosQuant(double x, double y, int quantita)
+{
+		
+}
+void Rosticceria::OrdinaPosQuantCibo(double x, double y, int quantita, string cibo)
+{
 }
 
 void Rosticceria::visualizza()

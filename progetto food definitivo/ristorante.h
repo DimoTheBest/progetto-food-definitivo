@@ -25,11 +25,20 @@ public:
 
 	void visualizzaMacchina(int i);
 
+	void OrdinaPos(double x, double y);
+	void OrdinaPosQuant(double x, double y, int quantita);
+	void OrdinaPosQuantCibo(double x, double y, int quantita, string cibo);
+
+	double GetTempo() { return tempo; };
+
 	void visualizza();
 
 private:
-	int tempoMedioPreparazione;
+	double tempoMedioPreparazione;
 	vector<Macchina> macchine;
+	double tempo;
 };
+
+
 
 #endif // !RISTORANTE_H
