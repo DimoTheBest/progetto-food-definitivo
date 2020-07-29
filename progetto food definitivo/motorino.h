@@ -15,6 +15,8 @@ public:
 
 	int GetVelocitaMedia() { return velocitaMedia; };
 
+	int GetPorzioniTrasportabili() { return porzioniTrasportabili; };
+
 private:
 	int velocitaMedia = 30;//km/h
 	int porzioniTrasportabili;

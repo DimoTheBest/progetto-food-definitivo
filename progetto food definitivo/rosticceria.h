@@ -3,12 +3,14 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 #include "foodDelivery.h"
+#include "motorino.h"
 
 using namespace std;
 
-class Rosticceria:public foodDelivery
+class Rosticceria:public foodDelivery,Motorino
 {
 public:
 	Rosticceria();
@@ -17,10 +19,17 @@ public:
 
 	double GetPrezzoConsegna() { return prezzoConsegna; };
 
+	void SetParcoMotorini();
+
+	void ModificaDisponibilitaMotorino(int i,bool a);
+
+	void visualizzaMotorino(int i);
+
 	void visualizza();
 
 private:
 	double prezzoConsegna;
+	vector<Motorino> motorini;
 };
 
 #endif // !ROSTICCERIA_H

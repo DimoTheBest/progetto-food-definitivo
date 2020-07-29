@@ -3,12 +3,14 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 #include "foodDelivery.h"
+#include "macchina.h"
 
 using namespace std;
 
-class Ristorante:public foodDelivery
+class Ristorante:public foodDelivery,Macchina
 {
 public:
 	Ristorante();
@@ -17,10 +19,17 @@ public:
 
 	int GetTempoMedioPreparazione() { return tempoMedioPreparazione; };
 
+	void SetParcoMacchine();
+
+	void ModificaDisponibilitaMacchina(int i, bool a);
+
+	void visualizzaMacchina(int i);
+
 	void visualizza();
 
 private:
 	int tempoMedioPreparazione;
+	vector<Macchina> macchine;
 };
 
 #endif // !RISTORANTE_H
